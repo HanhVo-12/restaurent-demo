@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet"
+            href="/assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/text.css">
+    <link rel="stylesheet" href="/assets/css/adstyle.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    
+</head>
+<body >
+    <div class="wrapper">
+        <div id="sidebar">
+            <div class="logo">
+                <p></p>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li class="item-li" onclick="onClick(event)">
+                        <a href="/index.html" class="menu-item">
+                            <i class="ti-icons ti-home"></i>
+                        Home</a>
+                    </li>
+                    <li class="item-li" onclick="onClick(event)">
+                        <a id="acountBtn" href="#userlayout" class="menu-item">
+                            <i class="ti-icons ti-user"></i>
+                            Acount</a>
+                    </li>
+                    <li class="item-li" onclick="onClick(event)">
+                       
+                        <a id="productBtn" href="#productlayout" class="menu-item">
+                            <i class="ti-icons ti-files"></i>
+                            Products</a>
+                    </li>
+                    <li class="item-li" onclick="onClick(event)">  
+                        <a id="categoryBtn" href="#categorylayout" class="menu-item">
+                            <i class="ti-icons ti-link"></i>
+                            Category</a>
+                    </li>    
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="layout-toggle-btn">
+                <button id="toggle-sidebar" class="btn-toggle btn-primary">Toggle sidebar</button>
+            </div>
+            <div id="productlayout" class="layout-list" onload="renderProduct">
+                <div class="product-list-hd">
+                    <span class="text-title">List of product</span>
+                    <button id="btn-add-list" onclick="addModal()" type="button" class="btn btn-primary">Add product</button>
+                </div>
+                <hr width="100%">
+                <div class="proct-list-center">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ti-search" id="basic-addon1"></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <table class="product-list">
+                        <thead class="text-primary list-product-title">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Image</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentProduct" class="tbdy-style">
+
+                        </tbody>
+                        
+
+                    </table>
+                </div>
+                <hr width="100%">
+                
+            </div>
+
+            <div id="userlayout" class="layout-list" onload="renderUser">
+                <div class="product-list-hd">
+                    <span class="text-title">List of Users</span>
+                    <button onclick="addModalUser()" type="button" class="btn btn-primary">Add User</button>
+                </div>
+                <hr width="100%">
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ti-search" ></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <table class="user-list">
+                        <thead class="text-primary list-product-title">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Age</th>
+                                <th>Phone</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentAcount" class="tbdy-style">
+
+                        </tbody>
+                    
+                    </table>
+                </div>
+                <hr width="100%">
+                
+            </div>
+
+
+
+            <div id="categorylayout" class="layout-list" onload="renderCategory">
+                <div class="product-list-hd">
+                    <span class="text-title">List of Category</span>
+                    <button id="saveCategory" type="button" class="btn btn-primary">Add Category</button>
+                    <button id="updateCategory" type="button" style="display: none;" class="btn btn-primary">Update Category</button>
+
+                </div>
+                <hr width="100%">
+                <div class="">
+                    <div class="input-group mb-3 categoryContainer">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ti-plus" ></span>
+                            <span style="display: none;" class="input-group-text ti-pencil-alt" ></span>
+                        </div>
+                        <input id="nameCategory" placeholder="Name category" type="text" class="form-control form-control-category" aria-describedby="basic-addon1">
+                        <input type="hidden" id="idCategory">
+                        <div class="error-message-category" style="width: 100%; margin-top: 4px;"></div>
+                    </div>
+                    <table class="user-list">
+                        <thead class="text-primary list-product-title">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentCategory" class="tbdy-style">
+
+                        </tbody>
+                    
+                    </table>
+                </div>
+                <hr width="100%">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modalUser">
+        <div class="container-modal">
+            <div class="md-header">
+                <span class="title-modal"> Add User</span>
+            </div>
+            <hr width="100%">
+            <div class="md-content">
+                <form class="formContainUser" action="" id="formUser">
+                   <div class="form-group">
+                        <input type="text" class="form-input-user" placeholder="Name" id="nameUser">
+                        <p class="error-message-user"></p>
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-input-user" id="username" placeholder="Username">
+                        <p class="error-message-user"></p>
+                   </div>
+                   <div class="form-group">
+                    <input type="text" class="form-input-user" id="password" placeholder="Password">
+                        <p class="error-message-user"></p>
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-input-user" placeholder="Age" id="age">
+                        <p class="error-message-user"></p>
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-input-user" placeholder="Phone" id="phone">
+                        <p class="error-message-user"></p>
+                   </div>
+                   <input type="hidden" id="idUser">
+                </form>
+                
+            </div>
+            <hr width="100%">
+            <div class="md-footer">
+                <button  id="saveUser" class="btn-item btn btn-primary">Add User</button>
+                <button  id="updateUser" style="display: none;" class="btn-item btn btn-primary">Update</button>
+                <button class="btn-item btn btn-secondary" id="closeModalUser">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal">
+        <div class="container-modal">
+            <div class="md-header">
+                <span class="title-modal"> Add product</span>
+            </div>
+            <hr width="100%">
+            <div class="md-content">
+                <form class="formContainer" action="" id="form">
+                   <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Name" id="name">
+                        <p class="error-message"></p>
+                   </div>
+                   <div class="form-group">
+                        
+                        <input type="file" id="image" placeholder="Image" onchange="previewFile()">
+                        <img id="img_preview" src="" height="200" alt="" >
+                        
+                   </div>
+                   <div class="form-group">
+                        <select placeholder="Category" id="category"></select>
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Price" id="price">
+                        <p class="error-message"></p>
+                   </div>
+                   <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Description" id="description">
+                        <p class="error-message"></p>
+                   </div>
+                   <input type="hidden" id="id">
+                </form>
+                
+            </div>
+            <hr width="100%">
+            <div class="md-footer">
+                <button  id="saveProduct" class="btn-item btn btn-primary">Add product</button>
+                <button  id="updateProduct" style="display: none;" class="btn-item btn btn-primary">Update</button>
+                <button class="btn-item btn btn-secondary" id="closeModal">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+     
+
+
+
+
+
+    <script src="/user.js"></script>
+    <script src="/product.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/admin.js"></script>
+    
+</body>
+</html>

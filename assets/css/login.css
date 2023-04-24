@@ -1,0 +1,65 @@
+*{
+  
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    background-color: #0c88aec7;
+}
+.form-item{
+    flex: 1;
+    width: 100%;
+}
+.left {
+    margin: auto auto;
+}
+h2 {
+    display: inline-block;
+    font-size: 32px;
+    color: #29282c;
+    width: 100%;
+    text-align: center;
+}
+.form{
+}
+.form-group{
+    margin-bottom: 16px;
+}
+
+.form-input {
+    width: 314px;
+    padding: 8px 16px;
+    border: 0.5px solid #cfcfcf;
+    
+}
+.error-message {   
+    color: red;
+    font-size: 12px;
+}
+.btn-style {
+    width: 314px;
+    background-color: #333;
+    padding: 4px 12px;
+    height: 42px;
+    color: #cfcfcf;
+    border: none;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.right {
+    margin: auto 0;
+    width: 539px;
+    height: 463px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/bglogin.png');
+}

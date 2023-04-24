@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Porcher</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet"
+            href="/assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/assets/css/reset.css">
+        <link rel="stylesheet" href="/assets/css/text.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/respon.css">
+    </head>
+    <body>
+        <div id="main">
+            <header class="header">
+                <div class="left">
+                    <!-- <img src="https://s.tmimgcdn.com/scr/1200x627/212900/spoon-and-fork-restaurant-logo_212966-original.png" alt=""> -->
+                    <img src="./assets/images/Porch-Logo.png" alt="">
+                </div>
+                <i id="menu-mobile" class="menu-mobile ti-menu"></i>
+                <ul id="menu">
+                    <li><a href="/index.html" class="menu-item">Home</a></li>
+                    <li><a href="/components/about.html" class="menu-item">About</a></li>
+                    <li><a href="/components/product.html" class="menu-item">Product</a></li>
+                    <li><a href="/components/blog.html" class="menu-item">Blog</a></li>
+                    <li><a href="/components/contact.html" class="menu-item">Contact</a></li>
+                </ul>
+                <div class="right">
+                    <button class="btn-item login" onclick="handleLogin()"><i
+                            class="ti-icon ti-user"></i>Login</button>
+                </div>
+            </header>
+            <section id="container">
+                <div class="bg">
+                    <div class="text-bg">
+                        <div class="blur-text">
+
+                        </div>
+                        <div class="text">
+                            <h1 class="h1">Welcome to Restaurant</h1>
+                            <h3 class="h3">Loves healthyfood</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout-about">
+                    <div class="about-item about-right-img">
+                        <img src="/assets/images/lunch.png" alt="">
+                    </div>
+                    <div class="about-item about-left-text">
+                        <h4 class="h4">About Fida Restaurant</h4>
+                        <p class="p">
+                            "Log - The layer of wood cut from a large tree trunk
+                            with concentric circular veins representing the life
+                            cycle, age and value of the tree"
+
+                        </p>
+                        <button onclick="addAbout()">Read more</button>
+                    </div>
+                    
+                </div>
+                <div class="layout-list ourDish">
+                    <div class="item-text">
+                        <h3 class="h3">Our Popular Dishes</h3>
+                        <div class="text-d">
+                            <hr class="hr"> <span class="span">D</span>
+                            <hr class="hr">
+                        </div>
+                        <p class="p">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Nisi architecto molestiae quam
+                            mollitia, animi a fugit illum laborum ratione
+                            quo unde ex qui eum repudiandae</p>
+                    </div>
+
+                    <div class="form-dish-img-list">
+                        <div class="form-dish-img">
+                            <div class="form-dish-img-item">
+                                <img src="/assets/images/dish2.png" alt="">
+                                <div class="form-dish-text">
+                                    <h6 class="h6">Spring pasta</h6>
+                                    <div class="ti-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+
+                                    </div>
+                                    <div class="price">$120</div>
+                                </div>
+                            </div>
+                            <div class="form-dish-img-item">
+                                <img src="/assets/images/dish3.png" alt="">
+                                <div class="form-dish-text">
+                                    <h6 class="h6">Noodles</h6>
+                                    <div class="ti-icon-dish">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price">$125</div>
+                                </div>
+                            </div>
+                            <div class="form-dish-img-item">
+                                <img src="/assets/images/dish1.png" alt="">
+                                <div class="form-dish-text">
+                                    <h6 class="h6">Pasta</h6>
+                                    <div class="ti-icon-dish">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="price">$135</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="layout-menu-home">
+                    <ul class="menu-home item-menu-1">
+                        <img src="/assets/images/tomato.png" alt="">
+                        <img src="/assets/images/spinach.png" alt="">
+                        <li><a href="" class="menu-home-item">All</a></li>
+                        <li><a href="" class="menu-home-item">Breakfast</a></li>
+                        <li><a href="" class="menu-home-item">Lunch</a></li>
+                        <li><a href="" class="menu-home-item">Dinner</a></li>
+                        <li><a href="" class="menu-home-item">Drink</a></li>
+                        <img src="/assets/images/celery.png" alt="">
+                    </ul>
+                    <select class="form-select form-select-1" aria-label="Default select
+                        example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">All</option>
+                        <option value="2">Breakfast</option>
+                        <option value="3">Lunch</option>
+                        <option value="3">Dinner</option>
+                        <option value="3">Drink</option>
+                    </select>
+                    <div class="wrapper-product">
+                        <div class="grid-container" id="page">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="layout-list layout-gallary">
+                    <div class="item-text">
+                        <h3 class="h3">Our Gallary</h3>
+                        <div class="text-d">
+                            <hr class="hr"> <span class="span">D</span>
+                            <hr class="hr">
+                        </div>
+                        <ul class="menu-home item-menu-2">
+                            <li><a href="" class="menu-home-item">All</a></li>
+                            <li><a href="" class="menu-home-item">Breakfast</a></li>
+                            <li><a href="" class="menu-home-item">Lunch</a></li>
+                            <li><a href="" class="menu-home-item">Dinner</a></li>
+                            <li><a href="" class="menu-home-item">Drink</a></li>
+                        </ul>
+                        <select class="form-select form-select-2" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">All</option>
+                            <option value="2">Breakfast</option>
+                            <option value="3">Lunch</option>
+                            <option value="3">Dinner</option>
+                            <option value="3">Drink</option>
+                        </select>
+                    </div>
+                    <div class="item-gallary galary-img">
+                        <img
+                            src="https://www.pikeplacemarket.org/wp-content/uploads/2022/01/Lowells_Restaurant-29_Spots_to_Enjoy_Lunch_at_the_Market-@thechoyalicious-rotated.jpg"
+                            alt="" class="galary-img-item">
+                        <img
+                            src="https://www.discoveripswich.com.au/wp-content/uploads/Lunch-with-a-View_Dovetails.jpg"
+                            alt="" class="galary-img-item">
+                        <img
+                            src="https://stationhousecafe.com/wp-content/uploads/2019/05/lunch800.jpg"
+                            alt="" class="galary-img-item">
+                        <img
+                            src="https://wandervirtually.com/wp-content/uploads/2019/06/food-italy-9349-spaghetti-2000x1200-1600x1200.jpg"
+                            alt="" class="galary-img-item">
+                        <img
+                            src="https://static.thehoneycombers.com/wp-content/uploads/sites/6/2022/09/lunch-in-central-orka-MAIN-IMAGE.jpeg"
+                            alt="" class="galary-img-item">
+                        <img
+                            src="https://www.telegraph.co.uk/content/dam/food-and-drink/2022/03/10/CG-theater-covent-gardenpictures-15_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg"
+                            alt="" class="galary-img-item">
+                    </div>
+                </div>
+
+                <div class="layout-list layout-reservation">
+                    <div class="item-text">
+                        <h3 class="h3">Make a Reservation</h3>
+                        <div class="text-d">
+                            <hr class="hr"> <span class="span">D</span>
+                            <hr class="hr">
+                        </div>
+                        <p class="p">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Nisi architecto molestiae quam
+                            mollitia, animi a fugit illum laborum ratione
+                            quo unde ex qui eum repudiandae! Quae rem quasi
+                            dolorum fugit?</p>
+                    </div>
+                    <img
+                        src="https://immerse.com.au/wp-content/uploads/2018/06/Immerse-Food-Wine-Celler-Door-Immerse-Food-Wine-Celler-Door-0002.jpg"
+                        alt="">
+
+                </div>
+            </section>
+            <div data-include-html="/components/footer/footer.html"></div>
+        </div>
+        <script src="product.js"></script>
+        <script src="/includeHtml.js"></script>
+        <script src="/app.js"></script>
+
+    </body>
+</html>
