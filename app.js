@@ -1,11 +1,11 @@
 
 function handleLogin() {
-    window.location.href = "../login.html";
+    window.location.href = "login.html";
     window.location.href = "../components/login.html"
 }
 
 function addAbout() {
-    window.location.href = "/components/about.html"
+    window.location.href = ".../components/about.html"
 }
 
 
