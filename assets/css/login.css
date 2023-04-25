@@ -61,5 +61,5 @@ h2 {
     height: 463px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('/assets/images/bglogin.png');
+    background-image: url('../images/bglogin.png');
 }
