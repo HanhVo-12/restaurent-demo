@@ -1,8 +1,8 @@
 
-function handleLogin() {
-    window.location.href = "./components/login.html";
-    window.location.href = "../components/login.html"
-}
+// function handleLogin() {
+//     window.location.href = "./components/login.html";
+//     window.location.href = "../components/login.html"
+// }
 
 function addAbout() {
     window.location.href = ".../components/about.html"
