@@ -95,10 +95,14 @@ body{
     float: right;
     padding: 13px;
 }
-i.ti-icon.ti-user{
-    margin-right: 6px;
+.header .fa-icon {
+        margin-right: 6px;
     color: white !important;
 }
+/* i.ti-icon.ti-user{
+    margin-right: 6px;
+    color: white !important;
+} */
 
 
 
