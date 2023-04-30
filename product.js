@@ -20,7 +20,7 @@ function previewFile() {
 
 
 }
-let productApi = 'http://localhost:3000/products';
+let productApi = 'https://hanhvo-12.github.io/restaurent-demo/db.json';
 let categoryApi = 'http://localhost:3000/categories';
 
 // chay chuong trinh
