@@ -24,10 +24,10 @@ function previewFile() {
 
 
 }
-let urlApi = 'https://api.github.com/repos/HanhVo-12/restaurent-demo/contents/db.json'
+// let url = 'https://api.github.com/repos/HanhVo-12/restaurent-demo/contents/db.json'
 let productApi = 'http://localhost:3000/products';
 let categoryApi = 'http://localhost:3000/categories';
-let token = TOKEN;
+
 
 // chay chuong trinh
 function startApp() {
