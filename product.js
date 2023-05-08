@@ -1,3 +1,4 @@
+import TOKEN from './sec'
 function previewFile() {
     //bien nhan img
     const preview = document.querySelector("#img_preview");
@@ -20,8 +21,10 @@ function previewFile() {
 
 
 }
-let productApi = 'https://hanhvo-12.github.io/restaurent-demo/db.json';
+let urlApi = 'https://api.github.com/repos/HanhVo-12/restaurent-demo/contents/db.json'
+let productApi = 'http://localhost:3000/products';
 let categoryApi = 'http://localhost:3000/categories';
+let token = TOKEN;
 
 // chay chuong trinh
 function startApp() {
