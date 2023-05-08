@@ -1,4 +1,7 @@
-import TOKEN from './sec'
+
+
+
+
 function previewFile() {
     //bien nhan img
     const preview = document.querySelector("#img_preview");
