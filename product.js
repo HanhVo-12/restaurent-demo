@@ -1,4 +1,3 @@
-
     function previewFile() {
         //bien nhan img
         const preview = document.querySelector("#img_preview");
@@ -22,16 +21,15 @@
 
     }
     
-    let urlAPI = 'https://api.github.com/repos/HanhVo-12/restaurent-demo/contents/db.json'
-    // let productApi = 'http://localhost:3000/products';
-    // let categoryApi = 'http://localhost:3000/categories';
+    let productApi = 'http://localhost:3000/products';
+    let categoryApi = 'http://localhost:3000/categories';
 
 
     // chay chuong trinh
     function startApp() {
-        getAPI(renderAPIData);
+
         getProduct(renderProduct);
-        // getProduct(renderPrductPage);
+        getProduct(renderPrductPage)
         getCategory(renderCategory);
         getCategory(renderCategoryPage);
 
@@ -39,7 +37,6 @@
         handleUpdateProduct();
         handleCreateCategory();
         handleUpdateCategory();
-        
     }
     startApp();
 
@@ -53,60 +50,6 @@
 
     }
 
-    function getAPI(callback) {
-        fetch(urlAPI, {
-            headers: {
-                'Authorization': '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'
-            }
-        })
-            .then(response => response.json())
-            .then(callback)
-            .catch(error => console.error(error))
-    }
-    function renderAPIData(data) {
-        console.log(data);
-
-        let base64Content = data.content; // Chuỗi base64 nhận được từ API
-        console.log(base64Content);
-        const decodedContent = atob(base64Content);
-        console.log(typeof decodedContent);
-        const currentjsonData = JSON.parse(decodedContent);
-        console.log(currentjsonData.products);
-
-        let listProductPage = currentjsonData.products.map(product => {
-            return `<div class="grid-item grid-item-${product.id}">
-                                <div class="grid-2">
-                                    <img src="${product.image}" alt="">
-                                    <div class="grid-desc-item">
-                                        <h6 class="h6">${product.nameProduct}</h6>
-                                        <p class="p">${product.category}</p>
-                                    </div>
-                                </div>
-                                
-                                <p class="priceStyle p" >${product.price} $</p>
-                            </div>
-            `
-        })
-        document.getElementById("page").innerHTML = listProductPage.join('');
-
-    }
-
-
-    // let listProductAdmin = products.map(function (product) {
-    //     let table = `<tr class="item-${product.id}">
-    //         <td>${product.id}</td>
-    //         <td>${product.nameProduct}</td>
-    //         <td><img class="img_product" src="${product.image}"></td>
-    //         <td>${product.category}</td>
-    //         <td>${product.price} $</td>
-    //         <td>${product.description}</td>
-    //         <td>
-    //             <button onclick="editProduct(${product.id})" class="btn btn-primary">Edit</button>
-    //             <button onclick="handleDeleteProduct(${product.id})" class="btn btn-secondary">Delete</button>
-    //         </td>
-
-    //     </tr>`;
-    //     return table
 
 
     // lay du lieu san pham tu file json
@@ -467,5 +410,4 @@
                 })
         }
     }
-
 
