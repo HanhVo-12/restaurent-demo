@@ -1,8 +1,4 @@
 
-import { token } from './securiry.js';
- 
-
-export default function () {
     function previewFile() {
         //bien nhan img
         const preview = document.querySelector("#img_preview");
@@ -33,7 +29,7 @@ export default function () {
 
     // chay chuong trinh
     function startApp() {
-
+        getAPI(renderAPIData);
         getProduct(renderProduct);
         // getProduct(renderPrductPage);
         getCategory(renderCategory);
@@ -43,10 +39,9 @@ export default function () {
         handleUpdateProduct();
         handleCreateCategory();
         handleUpdateCategory();
-        getAPI(renderAPIData);
+        
     }
     startApp();
-    previewFile();
 
     function resetInput() {
         document.getElementById('name').value = ''
@@ -61,7 +56,7 @@ export default function () {
     function getAPI(callback) {
         fetch(urlAPI, {
             headers: {
-                'Authorization': token
+                'Authorization': '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'
             }
         })
             .then(response => response.json())
@@ -69,6 +64,7 @@ export default function () {
             .catch(error => console.error(error))
     }
     function renderAPIData(data) {
+        console.log(data);
 
         let base64Content = data.content; // Chuỗi base64 nhận được từ API
         console.log(base64Content);
@@ -471,5 +467,5 @@ export default function () {
                 })
         }
     }
-}
+
 
