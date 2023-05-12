@@ -143,6 +143,9 @@ body{
     position: relative;
     margin: auto;
 }
+.slideshow-container .mySlides img{
+    height: 750px;
+}
 .mySlides{
     display: none;
 }
