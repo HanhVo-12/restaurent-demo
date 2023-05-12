@@ -77,6 +77,9 @@
         top: 5%;
         right: 15px;
     }
+    .blur-text{
+        height: none;
+    }
    
     .header .btn-item{
         display: block;
@@ -167,9 +170,9 @@
     i.ti-icon.ti-user{
         margin-inline: 4px;
     }
-    #container .bg{
+    /* #container .bg{
         padding-top: 100%;
-    }
+    } */
     .blur-text{
         display: none;
     }

@@ -125,8 +125,8 @@ body{
 
 
 
-#container .bg{
-    /* margin-top: 50px; */
+/* #container .bg{
+    margin-top: 50px;
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     padding-top: 50%;
@@ -134,7 +134,68 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     
+} */
+
+
+
+#container .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
 }
+.mySlides{
+    display: none;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+}
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
 .blur-text{
     filter: blur(2px);
     background-color: rgba(255, 0, 166, 0.151);
@@ -160,7 +221,7 @@ body{
     padding: 32px 48px;
     border-radius: 20px;
     position: absolute;
-    top: 50%;
+    top: 58%;
     right: 15%;
     transform: translateY(-50%);
    
@@ -503,3 +564,4 @@ body{
 .content-contact .btn-send:hover{
     opacity: 0.8;
 }
+
